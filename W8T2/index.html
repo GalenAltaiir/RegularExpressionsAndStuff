@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style = >
+    <p id="text">JavaScript Exercises</p>
+    <div>
+        <button onclick="backgroundCol()">Background Color</button>
+        <button onclick="borderCol()">Border Color</button>
+        <button onclick="textCol()">Text Color</button>
+    </div>
+
+
+
+
+    <script>
+        function backgroundCol(){
+            let bgCol = window.prompt("Enter background color")
+            let elem = document.getElementById("text")
+            /* elem.style.background = bgCol; */
+
+            document.getElementById("text").style.background = bgCol
+        }
+
+        function borderCol(){
+            let brdCol = window.prompt("Enter border color")
+            let elem = document.getElementById("text")
+            elem.style.border = "5px solid "+brdCol;
+        }
+
+        function textCol(){
+            let txtCol = window.prompt("Enter text color")
+            let elem = document.getElementById("text")
+            elem.style.color = txtCol;
+        }
+
+
+    </script>
+</body>
+</html>

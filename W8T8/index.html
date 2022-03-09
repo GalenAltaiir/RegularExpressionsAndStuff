@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <img id="img" src=""></img>
+        <button onclick = random()>Show Random Image</button>
+    </main>
+
+    <script>
+        function random(){
+            let images = 
+            [
+                'https://cdn.britannica.com/91/181391-050-1DA18304/cat-toes-paw-number-paws-tiger-tabby.jpg?q=60',
+                'https://icatcare.org/app/uploads/2018/06/Layer-1704-1200x630.jpg',
+                'https://i.natgeofe.com/n/46b07b5e-1264-42e1-ae4b-8a021226e2d0/domestic-cat_thumb_square.jpg',
+                'https://imageio.forbes.com/specials-images/imageserve/6082931ef598a85b055afe77/0x0.jpg?format=jpg&crop=3475,1955,x0,y182,safe&fit=crop',
+                'https://www.petmd.com/sites/default/files/styles/article_image/public/orange-tabby-kitten-walking-across-floor.jpg?itok=ApRxY9_r',
+                'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/best-girl-cat-names-1606245046.jpg',
+                'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/close-up-of-cat-wearing-sunglasses-while-sitting-royalty-free-image-1571755145.jpg?crop=1.00xw:0.754xh;0,0.122xh&resize=1200:*',
+            ]
+
+            var random = images[Math.floor(Math.random() * images.length)];
+            
+            document.getElementById("img").setAttribute("src", random)
+        }
+    </script>
+    <style>
+        main{
+            padding-top: 30vh;
+            display: grid;
+            justify-content: center;
+        }
+
+        #img{
+            width: 200px;
+            height: 200px;
+            background: black;
+            object-fit: cover;
+        }
+
+        button{
+            margin-top: 10px;
+            font-size: 16px;
+            padding: 10px;
+        }
+    </style>
+</body>
+</html>

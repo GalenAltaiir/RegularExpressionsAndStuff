@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="details()" action="#">
+        <label>Name</label>
+        <input type="text" id = "name">    
+        <label>Surname</label>
+        <input type="text" id = "surname">
+        
+        <input type="submit" value="Display">
+    </form>
+    
+    <div class="container-details">
+
+        <br>
+        <p>----------------------------------------------------------------------------------------------------</p>
+        <br>
+
+    </div>
+    <form onsubmit="calc()" action = '#'>
+        <label>Radius</label>
+        <input type="text" id = "radius">    
+        <label id = "volume">Volume</label>
+        <br>
+        <input type="submit" value="Calculate">
+    </form>
+
+
+    <script>
+        function details(){
+            let name = document.getElementById("name").value
+            let surname = document.getElementById("surname").value
+            let elem = document.getElementsByClassName("container-details")[0]
+
+            elem.innerHTML = "Hello "+name+" "+surname
+            
+        }
+
+        function calc(){
+            let radius = document.getElementById("radius").value
+            let volume = document.getElementById("volume")
+
+            let calc = 4/3 * Math.PI * Math.pow(radius, 3)
+
+            
+            volume.innerText = "Volume: "+calc.toFixed(4)+"cm"
+
+            // V = 3/4PiR^3
+            
+        }
+    </script>
+</body>
+</html>

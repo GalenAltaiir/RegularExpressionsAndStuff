@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class = "test">
+    <div class="tag" id = "modify">1</div>
+    <div class="tag">2</div>
+    <div class="tag">3</div>
+    <div class="tag">4</div>
+    
+    <script>
+        let elem = document.getElementById("modify")
+        
+        // SET
+        console.log(elem.getAttribute("class"))
+        elem.setAttribute("class", "SAE")
+        console.log(elem.getAttribute("class"))
+
+        // Before any changes, GET
+        console.log(elem.getAttribute("style"))
+        // SET
+        elem.setAttribute("style", "width: 50px; height: 50px; background: red")
+        // GET
+        console.log(elem.getAttribute("style"))
+
+        console.log(elem.getAttributeNode("style"))
+        console.log(elem.attributes)
+
+        // REMOVE
+        elem.removeAttribute("style")
+        console.log(elem.attributes)
+    </script>
+</body>
+</html>

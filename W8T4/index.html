@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="customers">
+        <button onclick = "addRow()">Add New Row</button>
+        <tbody>
+
+            <tr>
+                <th>Company</th>
+                <th>Contact</th>
+                <th>Country</th>
+            </tr>
+            <tr id = "record0">
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td>
+                <td>Germany</td>
+            </tr>
+        </tbody>
+      </table>
+        <!-- SCRIPT -->
+      <script>
+
+          table = document.getElementById("customers")
+          let x = table.rows[1].cells.length
+            console.log(x)
+
+          function addRow(){
+            let index = 1;
+            table = document.getElementById("customers")
+            table.innerHTML += 
+            `
+            <tr id='record`+index+`'>
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td>
+                <td>Germany</td>
+            </tr>
+            `
+            index++;
+            table.setAttribute("style", "#customers tr:nth-child(even){background-color: #f2f2f2;}")
+
+                // write a js function that accepts row/ col to identify a particular cell and a string to update the content of that cell
+                // aka give it coords and change the contents
+            }
+
+
+      </script>
+        <!-- STYLE -->
+      <style>
+          button{
+              background: #04AA6D;
+              color: white;
+              padding: 10px;
+              border: none;
+              font-family: Arial, Helvetica, sans-serif;
+              font-size: 20px;
+              cursor: pointer;
+          }
+
+          #customers {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            }
+
+        #customers td, #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            }
+
+        
+
+        #customers tr:hover {background-color: #ddd;}
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #04AA6D;
+            color: white;
+            }
+      </style>
+</body>
+</html>

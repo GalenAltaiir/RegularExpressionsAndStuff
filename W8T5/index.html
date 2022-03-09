@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <select id="dropdown">
+        <option value="">Red</option>
+        <option value="">Green</option>
+    </select>
+
+    <button onclick="remove()">Select and Remove</button>
+    <button onclick="add()">Add Something</button>
+    <script>
+        function remove(){
+            let select = document.getElementById("dropdown")
+            /* let value = select.options[select.selectedIndex].text */
+            let selectedOption = select.selectedIndex
+            
+            select.remove(selectedOption)
+        }
+
+        function add(){
+            let input = prompt("What would you like to add?")
+            let addOption = document.createElement("option")
+            addOption.text = input
+
+            let select = document.getElementById("dropdown")
+
+            select.options.add(addOption)
+        }
+
+      
+
+
+    </script>
+</body>
+</html>
