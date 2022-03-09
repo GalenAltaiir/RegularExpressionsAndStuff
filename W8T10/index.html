@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>Guess the Number!</h1>
+            <p>Guess a number between 1 and a 100</p>
+            <input type="number" id = "guess"><br>
+            <button onclick="guess()">Guess</button>
+            <div class="ans"></div>
+        </div>
+    </main>
+    
+    <script>
+        function guess(){
+            let ans = document.getElementsByClassName("ans")[0]
+            let guessIn = document.getElementById("guess").value
+
+            let randomNum = Math.floor(Math.random() * 99) + 1
+            let guess = parseInt(guessIn)
+
+            
+            if(guess === randomNum){
+            ans.innerHTML = `My Guess was ` + randomNum + `. 
+            Your guess was `+guess+`. 
+            <h2>YOU WIN</h2>`
+        } else {
+            ans.innerHTML = `My Guess was ` + randomNum + `. 
+            Your guess was `+guess+`. 
+            <h2>YOU LOSE</h2>`
+            }
+
+            ans.style.textAlign = "center"
+            
+        }
+    </script>
+</body>
+</html>

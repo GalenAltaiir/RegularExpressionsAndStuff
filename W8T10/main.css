@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Noto+Sans&display=swap");
+body {
+  background: #F9c661;
+}
+
+body main {
+  background: white;
+  border-radius: 100%;
+  height: 60vh;
+  width: 60vh;
+  margin-top: 18vh;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  margin-top: 25%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body main .container input, body main .container button {
+  padding: 10px;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+body main .container input {
+  text-align: center;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  margin-bottom: 20px;
+  border: 2px solid #F9C661;
+}
+
+body main .container button {
+  width: 200px;
+  border: none;
+  color: white;
+  background: #F9C661;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=main.css.map */

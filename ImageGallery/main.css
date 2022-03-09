@@ -1,0 +1,36 @@
+body {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
+body .container {
+  width: 50vh;
+  height: 50vh;
+  background: #000;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 8fr 2fr;
+      grid-template-rows: 8fr 2fr;
+}
+
+body .container .current {
+  background: red;
+}
+
+body .container .gallery {
+  background: green;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+body .container .gallery #img1, body .container .gallery #img2, body .container .gallery #img3, body .container .gallery #img4 {
+  background: yellow;
+  margin: 5px;
+}
+/*# sourceMappingURL=main.css.map */

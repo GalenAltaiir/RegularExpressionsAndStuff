@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <img id="img" src=""></img>
+<!--         <div class="gallery">
+            <img src="" class = "g-img">
+            <img src="" class = "g-img">
+            <img src="" class = "g-img">
+            <img src="" class = "g-img">
+        </div> -->
+        <button onclick = prev() id = "prev">Prev</button>
+        <button onclick = next() id = "next">Next</button>
+    </main>
+
+    <script>
+            let index = 0
+            let images = 
+            [
+                'https://cdn.britannica.com/91/181391-050-1DA18304/cat-toes-paw-number-paws-tiger-tabby.jpg?q=60',
+                'https://icatcare.org/app/uploads/2018/06/Layer-1704-1200x630.jpg',
+                'https://i.natgeofe.com/n/46b07b5e-1264-42e1-ae4b-8a021226e2d0/domestic-cat_thumb_square.jpg',
+                'https://imageio.forbes.com/specials-images/imageserve/6082931ef598a85b055afe77/0x0.jpg?format=jpg&crop=3475,1955,x0,y182,safe&fit=crop',
+            ]
+/*             // GALLERY
+            let x = 0;
+
+            while(x <= 3){
+                document.getElementsByClassName[i]
+            } */
+
+            // MAIN IMG
+
+            document.getElementById("img").setAttribute("src", images[index])
+            document.getElementById("prev").disabled = true
+
+            function next(){
+                console.log(images.length)
+                if(index <= images.length - 1){
+                    index++;
+                    document.getElementById("img").setAttribute("src", images[index])
+                    document.getElementById("prev").disabled = false
+                    if(index >= images.length - 1){
+                        document.getElementById("next").disabled = true
+                    }
+                }
+            }
+
+            function prev(){
+                console.log(images.length)
+                if(index >= 0){
+                    index--;
+                    document.getElementById("img").setAttribute("src", images[index])
+                    document.getElementById("next").disabled = false
+                    if(index <= 0){
+                        document.getElementById("prev").disabled = true
+                    }
+                }
+            }
+    </script>
+    <style>
+        main{
+            padding-top: 30vh;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            align-content: center;
+            width: 40vh;
+            height: 40vh;
+            margin: auto;
+        }
+
+        #img{
+            grid-column: 1/-1;
+            background: black;
+            object-fit: cover;
+            width: 40vh;
+            height: 40vh;
+            object-fit: cover;
+        }
+
+        button{
+            grid-column: span 2;
+            margin-top: 10px;
+            font-size: 16px;
+            padding: 10px;
+        }
+    </style>
+</body>
+</html>

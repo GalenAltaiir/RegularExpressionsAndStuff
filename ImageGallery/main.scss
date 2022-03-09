@@ -1,0 +1,26 @@
+body{
+    display: grid;
+    justify-content: center;
+    margin-top: 20px;   
+    .container{
+        width: 50vh;
+        height: 50vh;
+        background: #000;
+        display: grid;
+        grid-template-rows: 8fr 2fr;
+        
+        .current{
+            background: red;
+        }
+
+        .gallery{
+            background: green;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            #img1, #img2, #img3, #img4 {
+                background: yellow;
+                margin: 5px;
+            }
+        }
+    }
+}
